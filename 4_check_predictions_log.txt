@@ -1,0 +1,64 @@
+C:\Users\user123\PycharmProjects\Hackathon-Finam_v4\venv\Scripts\python.exe C:\Users\user123\PycharmProjects\Hackathon-Finam_v4\4_check_predictions_by_neural_network.py
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ rescaling (Rescaling)       (None, 128, 128, 3)       0
+
+ conv2d (Conv2D)             (None, 126, 126, 32)      896
+
+ max_pooling2d (MaxPooling2D  (None, 63, 63, 32)       0
+ )
+
+ batch_normalization (BatchN  (None, 63, 63, 32)       128
+ ormalization)
+
+ conv2d_1 (Conv2D)           (None, 61, 61, 32)        9248
+
+ max_pooling2d_1 (MaxPooling  (None, 30, 30, 32)       0
+ 2D)
+
+ batch_normalization_1 (Batc  (None, 30, 30, 32)       128
+ hNormalization)
+
+ conv2d_2 (Conv2D)           (None, 28, 28, 32)        9248
+
+ max_pooling2d_2 (MaxPooling  (None, 14, 14, 32)       0
+ 2D)
+
+ batch_normalization_2 (Batc  (None, 14, 14, 32)       128
+ hNormalization)
+
+ flatten (Flatten)           (None, 6272)              0
+
+ dense (Dense)               (None, 128)               802944
+
+ dense_1 (Dense)             (None, 2)                 258
+
+=================================================================
+Total params: 822,978
+Trainable params: 822,786
+Non-trainable params: 192
+_________________________________________________________________
+For image: NN\training_dataset_M1\0\SBER-M1-2021_01_06_12_40_00.png Predicted: [[3.9315763 2.6979446]] => class=1
+For image: NN\training_dataset_M1\0\SBER-M1-2021_01_06_15_20_00.png Predicted: [[ 1.2243998 -5.352553 ]] => class=0
+For image: NN\training_dataset_M1\0\SBER-M1-2021_01_06_18_00_00.png Predicted: [[ 19.029388 -20.619242]] => class=0
+For image: NN\training_dataset_M1\0\SBER-M1-2021_01_06_20_50_00.png Predicted: [[ 11.052507 -11.798628]] => class=0
+For image: NN\training_dataset_M1\0\SBER-M1-2021_01_06_23_30_00.png Predicted: [[ 4.3434196 -4.497291 ]] => class=0
+For image: NN\training_dataset_M1\0\SBER-M1-2021_01_11_14_20_00.png Predicted: [[ 3.109736  -0.8470676]] => class=0
+For image: NN\training_dataset_M1\0\SBER-M1-2021_01_11_17_00_00.png Predicted: [[ 2.6269538 -4.48626  ]] => class=0
+For image: NN\training_dataset_M1\0\SBER-M1-2021_01_11_19_50_00.png Predicted: [[ 1.6829628  -0.42402533]] => class=0
+For image: NN\training_dataset_M1\0\SBER-M1-2021_01_12_11_10_00.png Predicted: [[ 1.0935621 -1.21984  ]] => class=0
+For image: NN\training_dataset_M1\0\SBER-M1-2021_01_12_13_50_00.png Predicted: [[11.320513  -4.6844664]] => class=0
+For image: NN\training_dataset_M1\1\SBER-M1-2021_01_05_18_30_00.png Predicted: [[-29.31615   15.395636]] => class=1
+For image: NN\training_dataset_M1\1\SBER-M1-2021_01_05_21_20_00.png Predicted: [[-65.16581   45.839935]] => class=1
+For image: NN\training_dataset_M1\1\SBER-M1-2021_01_06_10_00_00.png Predicted: [[-33.81125   20.365875]] => class=1
+For image: NN\training_dataset_M1\1\SBER-M1-2021_01_08_12_10_00.png Predicted: [[-19.0535    23.892178]] => class=1
+For image: NN\training_dataset_M1\1\SBER-M1-2021_01_08_14_50_00.png Predicted: [[-14.407583  15.082897]] => class=1
+For image: NN\training_dataset_M1\1\SBER-M1-2021_01_08_17_30_00.png Predicted: [[-17.326878  15.342625]] => class=1
+For image: NN\training_dataset_M1\1\SBER-M1-2021_01_08_20_20_00.png Predicted: [[-29.498081  29.666887]] => class=1
+For image: NN\training_dataset_M1\1\SBER-M1-2021_01_08_23_00_00.png Predicted: [[-6.627314  8.786664]] => class=1
+For image: NN\training_dataset_M1\1\SBER-M1-2021_01_11_11_40_00.png Predicted: [[-33.564693  19.779861]] => class=1
+For image: NN\training_dataset_M1\1\SBER-M1-2021_01_11_22_30_00.png Predicted: [[-46.22661   30.441269]] => class=1
+
+Process finished with exit code 0
