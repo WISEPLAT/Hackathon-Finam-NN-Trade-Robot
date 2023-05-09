@@ -9,7 +9,10 @@ def get_df_tf0(ticker, timeframe_0, period_sma_fast, period_sma_slow):
     """Считываем данные для обучения нейросети - вход - timeframe_0"""
     _filename = os.path.join(os.path.join(cur_run_folder, "csv"), f"{ticker}_{timeframe_0}.csv")
     df = pd.read_csv(_filename, sep=',')  # , index_col='datetime')
-    df['datetime'] = pd.to_datetime(df['datetime'], format='%Y-%m-%d %H:%M:%S')
+    if timeframe_0 in ["M1", "M10", "H1"]:
+        df['datetime'] = pd.to_datetime(df['datetime'], format='%Y-%m-%d %H:%M:%S')
+    else:
+        df['datetime'] = pd.to_datetime(df['datetime'], format='%Y-%m-%d')
     df['sma_fast'] = df['close'].rolling(period_sma_fast).mean()  # формируем SMA fast
     df['sma_slow'] = df['close'].rolling(period_sma_slow).mean()  # формируем SMA slow
     df.dropna(inplace=True)  # удаляем все NULL значения
@@ -20,7 +23,10 @@ def get_df_t1(ticker, timeframe_1):
     """Считываем данные для обучения нейросети - выход - timeframe_1"""
     _filename = os.path.join(os.path.join(cur_run_folder, "csv"), f"{ticker}_{timeframe_1}.csv")
     df = pd.read_csv(_filename, sep=',')  # , index_col='datetime')
-    df['datetime'] = pd.to_datetime(df['datetime'], format='%Y-%m-%d %H:%M:%S')
+    if timeframe_1 in ["M1", "M10", "H1"]:
+        df['datetime'] = pd.to_datetime(df['datetime'], format='%Y-%m-%d %H:%M:%S')
+    else:
+        df['datetime'] = pd.to_datetime(df['datetime'], format='%Y-%m-%d')
     return df.copy()
 
 
