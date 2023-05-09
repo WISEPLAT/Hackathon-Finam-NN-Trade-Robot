@@ -84,7 +84,12 @@ https://github.com/WISEPLAT/Hackathon-Finam-NN-Trade-Robot
 pip install aiohttp aiomoex pandas matplotlib tensorflow finam-trade-api
 ```
 
-Выполните в корне вашего проекта через терминал эту команду:
+так же их можно установить такой командой
+```shell
+pip install -r requirements.txt
+```
+
+Обязательно! Выполните в корне вашего проекта через терминал эту команду:
 ```shell
 git clone https://github.com/cia76/FinamPy
 ```
