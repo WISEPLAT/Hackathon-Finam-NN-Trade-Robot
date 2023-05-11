@@ -184,7 +184,13 @@ P.S. Библиотека finam-trade-api - тоже позволяет рабо
             training_NN = {"SBER", "VTBR"}  # тикеры по которым обучаем нейросеть
             portfolio = {"SBER", "VTBR"}  # тикеры по которым торгуем и скачиваем исторические данные
            ```
-      ![alt text](https://raw.githubusercontent.com/WISEPLAT/imgs_for_repos/master/live.png )
+      - лог запуска торгового робота в live режиме торгов находится в файле **7_live_trading_log.txt** 
+      
+      запущенный в live режиме торговый робот и торговый терминал:
+      ![alt text](https://raw.githubusercontent.com/WISEPLAT/imgs_for_repos/master/live_orders_2_r.jpg )
+      
+      ордера выставленные торговым роботом:
+      ![alt text](https://raw.githubusercontent.com/WISEPLAT/imgs_for_repos/master/live_orders_r.jpg )
 
 
 Теперь можно запускать и смотреть, а предварительно лучше посмотреть видео по работе с этим кодом
